@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Sportbox HD
+    script src="/js/video.js"
+    script src="/js/videojs-contrib-hls.js"
+    link rel="stylesheet" href="/css/video-js.css"
+  body
+    video.video-js.vjs-default-skin id="video" width="1280" height="720"
+      source src="#{@url}" type="application/x-mpegURL"
+    
+  javascript:
+    var player = videojs('video', { "controls": true, "autoplay": false});
+    player.play();

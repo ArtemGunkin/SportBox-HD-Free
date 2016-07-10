@@ -1,0 +1,10 @@
+h2 Трансляции
+- @nodes.each do |node|
+  - if node['video']['streams'][3]
+    a href=="/stream?id=#{node['video']['streams'][3]['id']}"
+      h2 = "#{node['title']} [#{node['media_state']}]"
+  - else
+    a href=="/stream?id=#{node['video']['streams'][2]['id']}"
+      h2 = "#{node['title']} [#{node['media_state']}]"
+  p = node['datetime']
+  img src = "#{node['node_icon']['thumbnail']}"
